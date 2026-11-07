@@ -153,6 +153,7 @@
   gap: 10px;
 }
 
+/* Tablet */
 @media (max-width: 900px) {
   .editor-container {
     flex-direction: column;
@@ -164,6 +165,7 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 600px) {
   .editor-container {
     width: 95%;
@@ -182,7 +184,8 @@
   .editor-container .editor-tools {
     width: 100%;
     padding: 5px;
-    gap: 15px;
+    gap: 10px;
+    justify-content: space-between;
   }
 
   .editor-container .icon-btn,
@@ -207,20 +210,32 @@
   }
 
   .editor-container .line-controls {
+    width: 100%;
     gap: 8px;
   }
 
+  .editor-container .line-controls-btns,
+  .editor-container .text-controls,
+  .editor-container .text-format-controls,
+  .editor-container .text-font-controls,
+  .editor-actions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+  }
+
   .editor-container .text-controls {
-    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .editor-container .font-selector,
   .editor-actions > button {
+    flex: 1;
+    min-width: 0;
     font-size: 0.85em;
   }
 
   .editor-actions {
     flex-wrap: wrap;
-    gap: 7px;
   }
 }
