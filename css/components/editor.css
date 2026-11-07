@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+/* =========================
+   Desktop - Original layout
+========================= */
+
 .editor-container {
   background-color: #f3d1b1;
   border: 3px solid var(--clr-primary);
@@ -10,6 +14,8 @@
   height: fit-content;
   gap: 20px;
   padding: 20px;
+  flex-direction: row;
+  align-items: stretch;
 }
 
 .editor-container .editor-canvas {
@@ -63,7 +69,9 @@
 /* Editor layout */
 .editor-container .editor-tools {
   justify-content: space-between;
-  padding: 20px;
+  min-width: 350px;
+  padding: 20px 25px;
+  gap: 15px;
 }
 
 .editor-container .line-controls {
@@ -153,7 +161,57 @@
   opacity: 0;
 }
 
-/* Tablet */
+/* =========================
+   Desktop only
+========================= */
+
+@media (min-width: 901px) {
+  .editor-container {
+    flex-direction: row;
+    align-items: stretch;
+    width: fit-content;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .editor-container .editor-tools {
+    width: auto;
+    padding: 20px 25px;
+    min-width: 350px;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .editor-container .line-controls {
+    width: auto;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .editor-container .text-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .editor-container .text-format-controls,
+  .editor-container .text-font-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .editor-actions {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* =========================
+   Tablet
+========================= */
+
 @media (max-width: 900px) {
   .editor-container {
     flex-direction: column;
@@ -163,9 +221,19 @@
   .editor-container .editor-tools {
     gap: 15px;
   }
+
+  .editor-container .text-format-controls,
+  .editor-container .text-font-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
 }
 
-/* Mobile */
+/* =========================
+   Mobile
+========================= */
+
 @media (max-width: 600px) {
   .editor-container {
     width: 95%;
@@ -187,6 +255,7 @@
   /* Tools container */
   .editor-container .editor-tools {
     width: 100%;
+    min-width: 0;
     padding: 5px;
     gap: 18px;
   }
