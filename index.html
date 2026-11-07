@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meme Generator 2</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+
+  <body class="flex flex-column" onload="onInit()">
+    <header class="main-header flex space-between align-center">
+      <div class="main-logo">
+        <img src="imgs/logo.png" />
+      </div>
+
+      <nav class="main-nav flex">
+        <a href="#gallery" onclick="onShowGallery()">gallery</a>
+        <a href="#saved" onclick="onShowSaved()">Saved</a>
+      </nav>
+    </header>
+
+    <main class="flex flex-column justify-center align-center">
+      <section class="editor-container flex hidden">
+        <canvas
+          class="editor-canvas"
+          width="400"
+          height="400"
+          onmousedown="onMouseDown(event)"
+          onmousemove="onMouseMove(event)"
+          onmouseup="onMouseUp(event)"
+          ontouchstart="onTouchStart(event)"
+          ontouchmove="onTouchMove(event)"
+          ontouchend="onTouchEnd(event)"
+        ></canvas>
+
+        <div class="editor-tools flex flex-column">
+          <div class="line-controls flex align-center">
+            <input
+              class="text-input"
+              type="text"
+              placeholder="Type Here..."
+              oninput="onSetLineTxt(this.value)"
+            />
+
+            <div class="line-controls-btns flex justify-center">
+              <button class="icon-btn add-line-btn" onclick="onAddLine(this)">
+                <img src="icons/plus.png" />
+              </button>
+
+              <button class="icon-btn delete-line-btn" onclick="onDeleteLine()">
+                <img src="icons/trash.png" />
+              </button>
+            </div>
+          </div>
+
+          <div class="text-controls-container flex">
+            <div class="text-controls flex flex-column">
+              <div class="text-format-controls flex justify-center">
+                <button
+                  type="button"
+                  class="icon-btn increase-font-btn"
+                  onclick="onSetFontSize(1)"
+                >
+                  <img src="icons/increase-font.png" />
+                </button>
+
+                <button
+                  type="button"
+                  class="icon-btn decrease-font-btn"
+                  onclick="onSetFontSize(-1)"
+                >
+                  <img src="icons/decrease-font.png" />
+                </button>
+
+                <button
+                  type="button"
+                  class="icon-btn align-left-btn"
+                  onclick="onSetLineAlign('left')"
+                >
+                  <img src="icons/align-to-left.png" />
+                </button>
+
+                <button
+                  type="button"
+                  class="icon-btn align-center-btn"
+                  onclick="onSetLineAlign('center')"
+                >
+                  <img src="icons/align-to-center.png" />
+                </button>
+
+                <button
+                  type="button"
+                  class="icon-btn align-right-btn"
+                  onclick="onSetLineAlign('right')"
+                >
+                  <img src="icons/align-to-right.png" />
+                </button>
+              </div>
+
+              <div class="text-font-controls flex justify-center">
+                <select
+                  class="font-selector"
+                  onchange="onChangeFont(this.value)"
+                >
+                  <option value="Arial, sans-serif">Arial</option>
+                  <option value="Impact">Impact</option>
+                  <option value="cursive">Cursive</option>
+                  <option value="Verdana">Verdana</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Tahoma">Tahoma</option>
+                  <option value="Comic Sans MS">Comic Sans</option>
+                  <option value="Trebuchet MS">Trebuchet</option>
+                  <option value="Courier New">Courier New</option>
+                  <option value="Times New Roman">Times New Roman</option>
+                  <option value="Arial Black">Arial Black</option>
+                  <option value="Lucida Console">Lucida Console</option>
+                </select>
+
+                <label
+                  class="icon-btn color-picker-btn flex justify-center align-center"
+                >
+                  <img src="icons/paint.png" />
+                  <input
+                    type="color"
+                    class="color-picker"
+                    value="#ffffff"
+                    oninput="onSetColor(this.value)"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="editor-actions flex justify-center align-center">
+            <button class="download-btn" onclick="onDownloadMeme()">
+              Download
+            </button>
+            <button class="save-btn" onclick="onSaveMeme()">Save</button>
+            <button
+              class="share-btn"
+              type="button"
+              onclick="onShareFacebook(event)"
+            >
+              Share on Facebook
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery main-gallery"></section>
+      <section class="gallery saved-gallery hidden"></section>
+    </main>
+
+    <footer class="main-footer flex align-center justify-center">
+      <div class="main-logo">
+        <img src="imgs/logo.png" />
+      </div>
+      <span>all rights reserved 2026</span>
+    </footer>
+    <script src="/js/services/canvas.service.js"></script>
+    <script src="/js/services/meme.service.js"></script>
+    <script src="/js/controllers/canvas.controller.js"></script>
+    <script src="/js/controllers/meme.controller.js"></script>
+    <script src="/js/services/upload.service.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

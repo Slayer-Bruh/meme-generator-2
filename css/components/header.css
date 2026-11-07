@@ -1,0 +1,28 @@
+.main-header {
+  height: 70px;
+  padding: 0 30px;
+
+  background-color: var(--clr-primary);
+}
+
+.main-header .main-logo img {
+  height: 45px;
+  width: auto;
+}
+
+.main-header .main-nav {
+  gap: 30px;
+}
+
+.main-header .main-nav a {
+  font-size: 1.2em;
+
+  background-color: var(--clr-secondary);
+
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.main-header .main-nav a:hover {
+  background-color: var(--clr-bg);
+}

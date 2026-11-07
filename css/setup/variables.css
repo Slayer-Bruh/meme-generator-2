@@ -1,0 +1,13 @@
+:root {
+  /* Primary */
+  --clr-primary: #ff7f00;
+
+  /* Secondary */
+  --clr-secondary: #ffffff;
+
+  /* Background */
+  --clr-bg: #ffe9d4;
+
+  /* Text */
+  --clr-text: #040a2c;
+}

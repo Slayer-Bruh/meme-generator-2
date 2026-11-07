@@ -1,0 +1,16 @@
+/* Setup */
+@import './setup/variables.css';
+
+/* Basics */
+@import './basics/base.css';
+@import './basics/typography.css';
+
+/* Layout */
+@import './helpers/layout.css';
+@import './helpers/helpers.css';
+
+/* Components */
+@import './components/header.css';
+@import './components/gallery.css';
+@import './components/editor.css';
+@import './components/footer.css';

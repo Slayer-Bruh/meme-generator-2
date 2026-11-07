@@ -1,0 +1,10 @@
+.main-footer {
+  flex-direction: column;
+  min-height: 200px;
+  background-color: var(--clr-primary);
+}
+
+.main-footer .main-logo img {
+  height: 45px;
+  width: auto;
+}
