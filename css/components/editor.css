@@ -145,3 +145,64 @@
     gap: 10px;
   }
 }
+
+@media (max-width: 600px) {
+  .editor-container {
+    width: 95%;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 12px;
+  }
+
+  .editor-container .editor-canvas {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .editor-container .editor-tools {
+    width: 100%;
+    padding: 5px;
+    gap: 15px;
+  }
+
+  .editor-container .icon-btn,
+  .editor-container .text-input,
+  .editor-container .font-selector,
+  .editor-actions > button {
+    height: 42px;
+  }
+
+  .editor-container .icon-btn {
+    width: 42px;
+  }
+
+  .editor-container .icon-btn img {
+    width: 23px;
+    height: 23px;
+  }
+
+  .editor-container .text-input {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .editor-container .line-controls {
+    gap: 8px;
+  }
+
+  .editor-container .text-controls {
+    justify-content: center;
+  }
+
+  .editor-container .font-selector,
+  .editor-actions > button {
+    font-size: 0.85em;
+  }
+
+  .editor-actions {
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+}
