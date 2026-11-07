@@ -1,7 +1,6 @@
 .main-header {
   height: 70px;
   padding: 0 30px;
-
   background-color: var(--clr-primary);
 }
 
@@ -16,15 +15,31 @@
 
 .main-header .main-nav a {
   font-size: 1.2em;
-
   background-color: var(--clr-secondary);
-
   padding: 5px 10px;
   border-radius: 10px;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  outline: none;
+  user-select: none;
+  transition: background-color 0.2s;
 }
 
 .main-header .main-nav a:hover {
   background-color: var(--clr-bg);
+}
+
+.main-header .main-nav a:active {
+  background-color: var(--clr-bg);
+  transform: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.main-header .main-nav a:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 @media (max-width: 600px) {

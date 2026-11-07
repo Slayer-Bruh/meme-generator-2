@@ -6,7 +6,6 @@
   background-color: #f3d1b1;
   border: 3px solid var(--clr-primary);
   border-radius: 20px;
-
   width: fit-content;
   height: fit-content;
   gap: 20px;
@@ -27,15 +26,33 @@
   background-color: var(--clr-secondary);
   border: 0;
   border-radius: 10px;
-
   width: 55px;
   height: 55px;
 }
 
+/* Remove mobile tap highlight and default focus outline */
+.editor-container button,
+.editor-container .icon-btn,
+.editor-container .font-selector {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  outline: none;
+  user-select: none;
+}
+
+/* Prevent buttons from shrinking or scaling when pressed */
+.editor-container button:active,
+.editor-container .icon-btn:active,
+.editor-container .font-selector:active {
+  transform: none;
+}
+
+/* Add line button */
 .editor-container .add-line-btn {
   background-color: rgb(171, 248, 145);
 }
 
+/* Delete line button */
 .editor-container .delete-line-btn {
   background-color: rgb(248, 145, 145);
 }
@@ -47,7 +64,6 @@
 
 .editor-container .editor-tools {
   justify-content: space-between;
-
   padding: 20px;
 }
 
@@ -55,6 +71,7 @@
   flex-direction: column;
   gap: 10px;
 }
+
 .editor-container .text-input {
   width: 90%;
   text-align: center;
@@ -87,11 +104,7 @@
   border: 2px solid transparent;
 }
 
-.editor-container .text-format-controls,
-.editor-container .text-font-controls {
-  gap: 10px;
-}
-
+/* Hover effects */
 .editor-container .icon-btn:hover,
 .editor-container .font-selector:hover,
 .editor-actions > button:hover {
@@ -107,22 +120,26 @@
   border: 2px solid var(--clr-primary);
 }
 
+/* Add button colors */
 .editor-container .add-line-btn:hover {
   background-color: rgb(171, 248, 145);
   border: 2px solid rgb(139, 215, 113);
 }
 
+.editor-container .add-line-btn:active {
+  background-color: rgb(124, 196, 100);
+  border: 2px solid rgb(139, 215, 113);
+}
+
+/* Delete button colors */
 .editor-container .delete-line-btn:hover {
   background-color: rgb(248, 145, 145);
   border: 2px solid rgb(208, 108, 108);
 }
 
-.editor-container .add-line-btn:active {
-  background-color: rgb(124, 196, 100);
-}
-
 .editor-container .delete-line-btn:active {
   background-color: rgb(190, 89, 89);
+  border: 2px solid rgb(208, 108, 108);
 }
 
 .editor-container .color-picker {
@@ -141,6 +158,7 @@
     flex-direction: column;
     align-items: center;
   }
+
   .editor-container .editor-tools {
     gap: 10px;
   }
