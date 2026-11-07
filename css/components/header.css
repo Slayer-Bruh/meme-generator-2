@@ -26,3 +26,23 @@
 .main-header .main-nav a:hover {
   background-color: var(--clr-bg);
 }
+
+@media (max-width: 600px) {
+  .main-header {
+    height: 55px;
+    padding: 0 12px;
+  }
+
+  .main-header .main-logo img {
+    height: 35px;
+  }
+
+  .main-header .main-nav {
+    gap: 10px;
+  }
+
+  .main-header .main-nav a {
+    font-size: 0.9em;
+    padding: 5px 8px;
+  }
+}
