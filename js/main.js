@@ -2,6 +2,7 @@
 
 function onInit() {
   setCanvas()
+  renderGallery()
 }
 
 function onShowGallery() {
