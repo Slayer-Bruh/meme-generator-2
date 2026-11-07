@@ -184,6 +184,81 @@
   .editor-container .editor-tools {
     width: 100%;
     padding: 5px;
+    gap: 15px;
+    justify-content: space-between;
+  }
+
+  .editor-container .icon-btn,
+  .editor-container .text-input,
+  .editor-container .font-selector,
+  .editor-actions > button {
+    height: 42px;
+  }
+
+  .editor-container .icon-btn {
+    width: 42px;
+  }
+
+  .editor-container .icon-btn img {
+    width: 23px;
+    height: 23px;
+  }
+
+  .editor-container .text-input {
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .editor-container .line-controls {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .editor-container .line-controls-btns,
+  .editor-container .text-controls,
+  .editor-container .text-format-controls,
+  .editor-container .text-font-controls,
+  .editor-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .editor-container .text-controls {
+    flex-wrap: wrap;
+  }
+
+  .editor-container .font-selector,
+  .editor-actions > button {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.85em;
+  }
+
+  .editor-actions {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .editor-container {
+    width: 95%;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 12px;
+  }
+
+  .editor-container .editor-canvas {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .editor-container .editor-tools {
+    width: 100%;
+    padding: 5px;
     gap: 10px;
     justify-content: space-between;
   }
